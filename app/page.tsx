@@ -1,10 +1,10 @@
 import React from "react";
-import Header from "@/components/header/header";
+import Hero from "@/components/tailwind-components/hero";
 
 const Home = () => {
 	return (
 		<main className="main">
-			<Header>Header</Header>
+			<Hero></Hero>
 		</main>
 	);
 };
