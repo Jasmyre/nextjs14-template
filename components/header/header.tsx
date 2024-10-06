@@ -1,8 +1,8 @@
 import React, { ReactNode } from "react";
 import Link from "next/link";
-import HeaderNavButton from "./headerNavButton";
+import HeaderNavButton from "./HeaderNavButton";
 import { ModeToggle } from "../mode-toggle";
-import HeaderNavSearchBar from "./headerNavSearchBar";
+import HeaderNavSearchBar from "./HeaderNavSearchBar";
 
 interface HeaderProps {
   children: ReactNode;
