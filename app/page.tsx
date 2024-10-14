@@ -1,10 +1,12 @@
 import React from "react";
-import Hero from "@/components/tailwind-components/hero";
+import HeroSection from "@/components/template/hero-section/HeroSection";
+import Header from '@/components/template/header/Header';
 
 const Home = () => {
 	return (
 		<main className="main">
-			<Hero></Hero>
+			<Header>My Template</Header>
+			<HeroSection></HeroSection>
 		</main>
 	);
 };
