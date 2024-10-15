@@ -1,5 +1,3 @@
-
-
 import React from "react";
 
 import type { Metadata } from "next";
@@ -7,7 +5,6 @@ import localFont from "next/font/local";
 import "./globals.css";
 
 import { ThemeProvider } from "@/components/theme-provider";
-import FollowCursor from "../components/FollowCursur";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -20,23 +17,21 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
+const BASE_URL =
+  process.env.Base_URL ?? "err:Envronment_Variable_Is_Not_Defined";
+
 export const metadata: Metadata = {
-  metadataBase: new URL(String (process.env.BASE_URL)),
-  keywords: [
-    "search4movies",
-    "search for movies",
-    "search 4 movies",
-    "jasmyre search4movies",
-  ],
+  metadataBase: new URL(BASE_URL),
+  keywords: ["put", "some", "keywords", "here"],
   title: {
-    default: "Search4Movies",
-    template: "%s | Search4Movies",
+    default: "Title",
+    template: "%s | Title",
   },
   description:
-    "Your Ultimate Movie Discovery Tool. Search for movies, explore genres, read reviews, and discover new favorites with just a few clicks. the go-to platform for all your movie searching needs.",
+    "Define a description here",
   openGraph: {
-	title: "Title",
-	url: new URL(String (process.env.BASE_URL)),
+    title: "Title",
+    url: new URL(BASE_URL),
     images: [
       {
         url: "/image.png",
@@ -46,12 +41,14 @@ export const metadata: Metadata = {
       },
     ],
     description:
-      "Your Ultimate Movie Discovery Tool. Search for movies, explore genres, read reviews, and discover new favorites with just a few clicks. the go-to platform for all your movie searching needs.",
+      "Define a description here",
   },
   other: {
     "google-site-verification": "Z_jFqVnsRqmwaQwrIPd9ey7fdRY4tunPiojllRX0yI0",
   },
 };
+
+console.log(BASE_URL);
 
 export default function RootLayout({
   children,
@@ -67,7 +64,6 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <FollowCursor />
           {children}
         </ThemeProvider>
       </body>
